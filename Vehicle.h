@@ -8,14 +8,16 @@ class Vehicle
 {
 private:
     string registration, type, make, model;
-    int age;
+    int age = 0;
 
 public:
-    Vehicle();
     Vehicle(string registration, string type, string make, string model, int age);
-    ~Vehicle();
+    virtual ~Vehicle();
 
-    //int costPerDay();
-    //void displayVehicle();
-
+    const string getVehicleReg() const;
+    const int getVehicleAge() const;
+    virtual double costPerDay() const = 0;
 };
+
+inline const string Vehicle::getVehicleReg() const { return registration; }
+inline const int Vehicle::getVehicleAge() const { return age; }
