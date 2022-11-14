@@ -6,14 +6,20 @@ using namespace std;
 class Container
 {
 private:
-    vector<Vehicle> vehicles;
+    vector<Vehicle*> vehicles;
 
 public:
     Container();
     ~Container();
 
-    //void insertInto();
-    void displayAll();
+    void addItem(Vehicle* vehicle);
+    void displayReg();
+    void displayMainData();
+    void addItemPage();
+    void createCar();
+    void createBike();
+    bool checkRegFormat(string reg);
+
     void searchForBike();
     void searchForCar();
 };

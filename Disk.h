@@ -11,8 +11,6 @@ public:
     ~Disk();
 
     void readVehicleFromDisk();
-    void writeVehicleToDisk(T first, T last);
-
-
+    void writeVehicleToDisk();
 };
 

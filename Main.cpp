@@ -2,23 +2,53 @@
 #include "Container.h"
 #include "Vehicle.h"
 #include "Disk.h"
+#include "Car.h"
+#include "Bike.h"
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main() {
+
+    /* STORING VEHICLES
+    * Whilst implementing reading from disk
+    * -----------------------------------------------------------------------------------
+    */
+    Vehicle** vehicles = new Vehicle* [10];
+
+    vehicles[0] = new Car(3, 5, "GY46 HHH", "Honda", "Civic", 2010);
+    vehicles[1] = new Car(5, 5, "JU77 HSG", "Ford", "Focus", 2002);
+    vehicles[2] = new Car(5, 5, "HD88 KSD", "Audi", "TT", 2005);
+    vehicles[3] = new Car(5, 5, "LL47 CSA", "Audi", "Q5", 2020);
+    vehicles[4] = new Bike(75, 2, "FS77 DFD", "Honda", "MotorCross", 2011);
+    vehicles[5] = new Bike(50, 2, "CI92 FSS", "Toyota", "Moped", 2008);
+    vehicles[6] = new Car(3, 2, "BM99 HDS", "BMW", "M3", 2021);
+    vehicles[7] = new Bike(883, 2, "SF52 YYT", "Harley Davidson", "Dyna", 2019);
+
+    // Wrap vehicle pointers into Container vector
+    Container* container = new Container();
+    for (int i = 0; i < sizeof(vehicles); i++)
+        container->addItem(vehicles[i]);
+    
+    /*
+    * end
+    * -----------------------------------------------------------------------------------
+    */
+
 
     int option;
 
     do
     {
         cout << "" << endl;
-        cout << "Vehicle Rental System" << endl;
-        cout << "---------------------" << endl;
-        cout << "Registration Number    Cost Per Day    Vehicle Type" << endl;
-        cout << "-------------------    ------------    ------------" << endl;
-        //Container::displayAll();
-
+        cout << "Vehicle Rental System - Liam Hammond" << endl;
+        cout << "------------------------------------" << endl;
+        cout << "" << endl;
+        cout << left << setw(24) << "Registration Number" << left << setw(17) << "Cost Per Day" << left << setw(17) << "Vehicle Type" << endl;
+        cout << left << setw(24) << "-------------------" << left << setw(17) << "------------" << left << setw(17) << "------------" << endl;
+        container->displayMainData();
+      
         cout << "1) Add Vehicle" << endl;
         cout << "2) Remove Vehicle" << endl;
         cout << "3) Search for car" << endl;
@@ -31,40 +61,25 @@ int main() {
 
         cin >> option;
 
-        /*
+        
         switch (option)
         {
-        case 1: MiniApps::addVehicle(); break;
-        case 2: MiniApps::removeVehicle(); break;
-        case 3: MiniApps::searchCar(); break;
-        case 4: MiniApps::searchBike(); break;
-        case 5: MiniApps::sortReg(); break;
-        case 6: MiniApps::sortCPD(); break;
+        case 1: container->addItemPage();
+        //case 2: MiniApps::removeVehicle(); break;
+        //case 3: MiniApps::searchCar(); break;
+        //case 4: MiniApps::searchBike(); break;
+        //case 5: MiniApps::sortReg(); break;
+        //case 6: MiniApps::sortCPD(); break;
         }
-        */
-
         
-        Vehicle* v;
-
-        v[0] = Vehicle("GY46 HHH", "Car", "Honda", "Civic", 2010);
-        v[1] = Vehicle("JU77 HSG", "Car", "Ford", "Focus", 2002);
-
-
-        Disk d;
-
-        // Wrap into a vector
-        vector<Vehicle> vehicleVector;
-
-        vehicleVector.push_back(v[0]);
-        vehicleVector.push_back(v[1]);
-
-        copy(vehicleVector.begin(), vehicleVector.end(), ostream_iterator<string>(cout, "\n"));
-
-      
-
-        return 0;
 
     } while (option != 9);
 
+    #ifdef _DEBUG
+        // _CrtSeBreakAlloc();
+        _onexit(_CrtDumpMemoryLeaks);
+    #endif
+    delete container;
+    //delete vehicles;
     return 0;
 }
