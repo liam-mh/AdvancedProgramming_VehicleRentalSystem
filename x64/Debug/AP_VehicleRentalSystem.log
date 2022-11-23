@@ -3,6 +3,4 @@ C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,9): warning 
 C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,32): warning C4101: 'seats': unreferenced local variable
 C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,25): warning C4101: 'doors': unreferenced local variable
 C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,17): warning C4101: 'wheels': unreferenced local variable
-C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(84,16): warning C4101: 'seats': unreferenced local variable
-C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(84,9): warning C4101: 'doors': unreferenced local variable
   AP_VehicleRentalSystem.vcxproj -> C:\Users\Win10\source\repos\AP_VehicleRentalSystem\x64\Debug\AP_VehicleRentalSystem.exe

@@ -64,13 +64,15 @@ int main() {
         
         switch (option)
         {
-        case 1: container->addItemPage();
+        case 1: container->addItemPage(); break;
         //case 2: MiniApps::removeVehicle(); break;
         //case 3: MiniApps::searchCar(); break;
         //case 4: MiniApps::searchBike(); break;
         //case 5: MiniApps::sortReg(); break;
         //case 6: MiniApps::sortCPD(); break;
         }
+
+        cout << "END OF MAIN PAGE LOOP" << endl;
         
 
     } while (option != 9);
@@ -81,5 +83,7 @@ int main() {
     #endif
     delete container;
     //delete vehicles;
+
+    cout << "END OF MAIN.CPP" << endl;
     return 0;
 }
