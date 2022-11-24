@@ -1,6 +1,10 @@
-﻿  Container.cpp
-C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,9): warning C4101: 'engine': unreferenced local variable
-C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,32): warning C4101: 'seats': unreferenced local variable
-C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,25): warning C4101: 'doors': unreferenced local variable
-C:\Users\Win10\source\repos\AP_VehicleRentalSystem\Container.cpp(49,17): warning C4101: 'wheels': unreferenced local variable
-  AP_VehicleRentalSystem.vcxproj -> C:\Users\Win10\source\repos\AP_VehicleRentalSystem\x64\Debug\AP_VehicleRentalSystem.exe
+﻿  Car.cpp
+  Container.cpp
+C:\Users\c1022456\source\repos\AdvancedProgramming_VehicleRentalSystem\Container.cpp(49,9): warning C4101: 'engine': unreferenced local variable
+C:\Users\c1022456\source\repos\AdvancedProgramming_VehicleRentalSystem\Container.cpp(49,32): warning C4101: 'seats': unreferenced local variable
+C:\Users\c1022456\source\repos\AdvancedProgramming_VehicleRentalSystem\Container.cpp(49,25): warning C4101: 'doors': unreferenced local variable
+C:\Users\c1022456\source\repos\AdvancedProgramming_VehicleRentalSystem\Container.cpp(49,17): warning C4101: 'wheels': unreferenced local variable
+  Main.cpp
+  Generating Code...
+C:\Users\c1022456\source\repos\AdvancedProgramming_VehicleRentalSystem\Car.cpp(71): warning C4715: 'Car::createCar': not all control paths return a value
+  AP_VehicleRentalSystem.vcxproj -> C:\Users\c1022456\Source\Repos\AdvancedProgramming_VehicleRentalSystem\x64\Debug\AP_VehicleRentalSystem.exe

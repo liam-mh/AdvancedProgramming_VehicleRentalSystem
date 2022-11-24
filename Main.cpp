@@ -15,6 +15,7 @@ int main() {
     * Whilst implementing reading from disk
     * -----------------------------------------------------------------------------------
     */
+
     Vehicle** vehicles = new Vehicle* [10];
 
     vehicles[0] = new Car(3, 5, "GY46 HHH", "Honda", "Civic", 2010);
@@ -65,14 +66,15 @@ int main() {
         switch (option)
         {
         case 1: container->addItemPage(); break;
-        //case 2: MiniApps::removeVehicle(); break;
-        //case 3: MiniApps::searchCar(); break;
-        //case 4: MiniApps::searchBike(); break;
-        //case 5: MiniApps::sortReg(); break;
-        //case 6: MiniApps::sortCPD(); break;
+                
+        //case 2: removeVehicle(); break;
+        //case 3: searchCar(); break;
+        //case 4: searchBike(); break;
+        //case 5: sortReg(); break;
+        //case 6: sortCPD(); break;
         }
 
-        cout << "END OF MAIN PAGE LOOP" << endl;
+        cout << "**END OF MAIN PAGE LOOP" << endl;
         
 
     } while (option != 9);
@@ -84,6 +86,6 @@ int main() {
     delete container;
     //delete vehicles;
 
-    cout << "END OF MAIN.CPP" << endl;
+    cout << "**END OF MAIN.CPP" << endl;
     return 0;
 }
