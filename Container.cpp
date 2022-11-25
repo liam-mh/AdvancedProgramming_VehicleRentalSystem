@@ -73,7 +73,18 @@ void Container::addItemPage()
         cin >> option;
         cout << "" << endl;
         if (option == 1)
+        {
             createCar();
+            cout << "What would you like to do now?" << endl;
+            cout << "" << endl;
+            cout << "1) Create another vehicle" << endl;
+            cout << "2) Return to main menu" << endl;
+            cin >> option;
+            cout << "" << endl;
+            if (option == 2)
+                break;
+        }
+
         else if (option == 2)
             createBike();
 
@@ -129,17 +140,13 @@ void Container::createCar()
     cout << "" << endl;
     if (option == 1)
     {
-
-        cout << "CREATE CAR" << endl;
+        Vehicle* v = new Car(doors, seats, registration, make, model, age);
+        addItem(v);
+        cout << make << " " << model << " has been added" << endl;
     }
     else if (option == 2)
         cout << "Please retry and enter the correct details." << endl;
     
-    /*
-    Left off needing to loop to check reg is done
-    finish add item
-    finish create car
-    */
     cout << "END OF createCar()" << endl;
 }
 
