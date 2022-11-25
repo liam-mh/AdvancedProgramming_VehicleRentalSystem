@@ -29,6 +29,7 @@ int main() {
 
     // Wrap vehicle pointers into Container vector
     Container* container = new Container();
+
     for (int i = 0; i < sizeof(vehicles); i++)
         container->addItem(vehicles[i]);
     

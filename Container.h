@@ -3,10 +3,10 @@
 #include <vector>
 using namespace std;
 
-class Container : vector<Vehicle*>
+class Container
 {
 private:
-    //vector<Vehicle*> vehicles;
+    vector<Vehicle*> vehicles;
 
 public:
     Container();
@@ -16,6 +16,7 @@ public:
     void displayReg();
     void displayMainData();
     void addItemPage();
+    void createCar();
     void createBike();
     bool checkRegFormat(string reg);
 

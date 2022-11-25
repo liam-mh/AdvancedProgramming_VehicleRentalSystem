@@ -11,7 +11,7 @@ public:
     Car(int doors, int seats, string registration, string make, string model, int age);
     ~Car();
 
-    static Car* createCar();
+    //void createCar();
     virtual double costPerDay() const override;
 
 };
